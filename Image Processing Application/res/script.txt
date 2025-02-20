@@ -1,0 +1,192 @@
+# Load the PNG image from res and call it image
+load image1.png image
+
+# Load the PNG mask image from res and call it mask
+load mask.png mask
+
+# Save the PNG image as PPM image to res and call it image1
+save image-png-save-as-ppm.ppm image
+
+# Load the PPM image from res and call it image2
+load image-png-save-as-ppm.ppm image2
+
+# Save the PPM image to res as a PNG image and call it image2
+save image-ppm-save-as-png.png image2
+
+# Create red component of the image and call it redImage and save as redImage in png.
+red-component image redImage
+save image-red.png redImage
+
+# Create green component of the image and call it greenImage and save as greenImage in png.
+green-component image greenImage
+save image-green.png greenImage
+
+# Create blue component of the image and call it blueImage and save as blueImage in png.
+blue-component image blueImage
+save image-blue.png blueImage
+
+# Create value component of the image and call it valueImage and save as valueImage in png.
+value-component image valueImage
+save image-value-greyscale.png valueImage
+
+# Create intensity component of the image and call it intensityImage and save as intensityImage in png.
+intensity-component image intensityImage
+save image-intensity-greyscale.png intensityImage
+
+# Create luma component of the image and call it lumaImage and save as lumaImage in png.
+luma-component image lumaImage
+save image-luma-greyscale.png lumaImage
+
+# Flip the image vertically and save as verticalFlipImage
+vertical-flip image verticalFlipImage
+save image-vertical-flip.png verticalFlipImage
+
+# Flip the image horizontally and save as horizontalFlipImage
+horizontal-flip image horizontalFlipImage
+save image-horizontal-flip.png horizontalFlipImage
+
+# Brighten the image by adding 100 and save as brightenedImage
+brighten 100 image brightenedImage
+save image-brighten-by-100.png brightenedImage
+
+# Darken the image by subtracting 100 and save as darkenedImage
+darken 100 image darkenedImage
+save image-darken-by-100.png darkenedImage
+
+# Split the original image into RGB channels and save each component
+rgb-split image image-red image-green image-blue
+
+# Combine the three images into a single color image called combinedImage
+rgb-combine combinedImage image-red image-green image-blue
+save image-combined.png combinedImage
+
+# Blur the image and save as blurredImage
+blur image blurredImage
+save image-blurred.png blurredImage
+
+# Sharpening the image and save as sharpeningImage
+sharpening image sharpeningImage
+save image-sharpening.png sharpeningImage
+
+# Apply sepia filter to the image and save as sepiaImage
+sepia image sepiaImage
+save image-sepia.png sepiaImage
+
+# Apply greyscale filter to the image and save as greyscaleImage
+greyscale image greyscaleImage
+save image-greyscale.png greyscaleImage
+
+# Create histogram of the image and save as imageModelHistogram
+histogram image imageModelHistogram
+save image-histogram.png imageModelHistogram
+
+# Apply Color-correct to the image and save as colorCorrectImage
+color-correct image colorCorrectImage
+save image-color-correct.png colorCorrectImage
+
+# Apply Color-correct to the image by 50% and save as colorCorrectImage
+color-correct image colorCorrectImage50 split 50
+save image-color-correct-split-50.png colorCorrectImage50
+
+# Create histogram of to the Color-correct image and save as histogramColorCorrectImage
+histogram colorCorrectImage histogramColorCorrectImage
+save image-color-correct-histogram.png histogramColorCorrectImage
+
+# Apply levels-adjust to the image and save as levelsAdjustImage
+levels-adjust 20 100 255 image levelsAdjustImage
+save image-levels-adjust-20-100-255.png levelsAdjustImage
+
+# Create histogram of to the levels-adjust image and save as histogramLevelsAdjustImage
+histogram levelsAdjustImage histogramLevelsAdjustImage
+save image-levels-adjust-20-100-255-histogram.png histogramLevelsAdjustImage
+
+# Compress the image by 50 and save as compressedImage
+compress 50 image compressedImage
+save image-compress-by-50.png compressedImage
+
+# Create histogram of to the Compressed image and save as histogramCompressedImage
+histogram compressedImage histogramCompressedImage
+save image-compress-by-50-histogram.png histogramCompressedImage
+
+# Compress the image by 99 and save as compressedImage
+compress 99 image compressedImage99
+save image-compress-by-99.png compressedImage99
+
+# Create histogram of to the Compressed image and save as histogramCompressedImage99
+histogram compressedImage99 histogramCompressedImage99
+save image-compress-by-99-histogram.png histogramCompressedImage99
+
+# Apply levels-adjust to the image by 50% and save as levelsAdjustImage50
+levels-adjust 20 100 255 image levelsAdjustImage50
+save image-levels-adjust-20-100-255-split-50.png levelsAdjustImage50
+
+# Blur the image by 50% and save as blurredImage50
+blur image blurredImage50 split 50
+save image-blurred-split-50.png blurredImage50
+
+# Sharpening the image by 50% and save as sharpeningImage50
+sharpening image sharpeningImage50 split 50
+save image-sharpening-split-50.png sharpeningImage50
+
+# Apply sepia filter to the image by 50% and save as sepiaImage50
+sepia image sepiaImage50 split 50
+save image-sepia-split-50.png sepiaImage50
+
+# Apply greyscale filter to the image by 50% and save as greyscaleImage50
+greyscale image greyscaleImage50 split 50
+save image-greyscale-split-50.png greyscaleImage50
+
+# Load the PNG image from res and call it image
+load image1.png image
+
+# Load the PNG mask image from res and call it mask
+load mask.png mask
+
+# Blur the image with mask and save it as blurImageMask
+blur image mask blurImageMask
+save image-blur-with-mask.png blurImageMask
+
+# Sharpen the image with mask and save it as sharpeningImageMask
+sharpening image mask sharpeningImageMask
+save image-sharpening-with-mask.png sharpeningImageMask
+
+# Greyscale the image with mask and save it as greyscaleImageMask
+greyscale image mask greyscaleImageMask
+save image-greyscale-with-mask.png greyscaleImageMask
+
+# Apply sepia tone to the image with mask and save it as sepiaImageMask
+sepia image mask sepiaImageMask
+save image-sepia-with-mask.png sepiaImageMask
+
+# Extract the red component of the image with mask and save it as red-componentImageMask
+red-component image mask red-componentImageMask
+save image-red-component-with-mask.png red-componentImageMask
+
+# Extract the green component of the image with mask and save it as green-componentImageMask
+green-component image mask green-componentImageMask
+save image-green-component-with-mask.png green-componentImageMask
+
+# Extract the blue component of the image with mask and save it as blue-componentImageMask
+blue-component image mask blue-componentImageMask
+save image-blue-component-with-mask.png blue-componentImageMask
+
+# Extract the value component of the image with mask and save it as value-componentImageMask
+value-component image mask value-componentImageMask
+save image-value-component-with-mask.png value-componentImageMask
+
+# Extract the luma component of the image with mask and save it as luma-componentImageMask
+luma-component image mask luma-componentImageMask
+save image-luma-component-with-mask.png luma-componentImageMask
+
+# Extract the intensity component of the image with mask and save it as intensity-componentImageMask
+intensity-component image mask intensity-componentImageMask
+save image-intensity-component-with-mask.png intensity-componentImageMask
+
+# Downscale the image to new width and height and save it as newImage1
+downscale image newImage1 99 100
+save image-downscale-99-100.png newImage1
+
+# Downscale the image to new width and height and save it as newImage2
+downscale image newImage2 121 120
+save image-downscale-121-120.png newImage2
+
